@@ -20,8 +20,11 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -o ./story",
+    "sass": "sass --watch src/styles/style.scss src/App.css",
+    "deploy":"rm -rf story/ && npm run build-storybook && gh-pages -d story"
   },
+  "homepage": "https://github.com/kishorekumaru/styleguide",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -42,9 +45,11 @@
     "@storybook/addon-actions": "^6.0.16",
     "@storybook/addon-essentials": "^6.0.16",
     "@storybook/addon-links": "^6.0.16",
+    "@storybook/addons": "^6.0.18",
     "@storybook/node-logger": "^6.0.16",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.16",
+    "@storybook/theming": "^6.0.18",
     "babel-loader": "^8.1.0",
     "react-is": "^16.13.1"
   }
